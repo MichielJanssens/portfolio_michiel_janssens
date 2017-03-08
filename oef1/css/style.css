@@ -15,8 +15,83 @@ body{
   box-sizing: border-box;
 }
 
-#albums ul{
+.logo{
+    color: #9953c4;
+    font-size: 35px;
+    font-style: italic;
+    font-style: bold;
+}
+
+header h1{
+    margin-bottom: 50px;
+}
+
+header{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+
+ul{
+    color: white;
+    list-style-type: none;
+}
+
+header nav ul li{
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#albums ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+
+    header{
+        flex-direction: row;
+    }
+    
+    nav{
+        margin-top: 17px;
+        width: 100%;
+    }
+    
+    nav ul{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+    }
+    
+    
+    #albums ul{
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    #albums ul{
+        display: flex;
+        justify-content:space-around;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav{
+        width: 500px;
+    }
 }
