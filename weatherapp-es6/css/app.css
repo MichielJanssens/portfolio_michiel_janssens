@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+
+#app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 25vh;
+    color: white;
+}
