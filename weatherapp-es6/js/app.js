@@ -47,10 +47,16 @@ class Weather {
         var color;
         if (this.weather.temperature < 15) {
             color = '#87CEFA';
-        } else color = '#faac45';
+            $('#app ').append(`<h1>${Math.round(this.weather.temperature)}°</h1>`);
+            $('#app ').append(`<img src="./img/boot.gif">`);
+            $('#app ').append(`<h2>Mackerel skies and Mare"s tails make tall ships carry low sails</h2>`);
+        } else{
+            color = '#faac45';
+            $('#app ').append(`<h1>${Math.round(this.weather.temperature)}°</h1>`);
+            $('#app ').append(`<img src="./img/Spider.gif">`);
+            $('#app ').append(`<h2>If spiders are many and spinning their web, the spell will soon be very dry</h2>`);
+        }
         $('#app').css('background-color', color);
-
-        $('#app ').append(`<h1>${Math.round(this.weather.temperature)}°</h1>`);
     }
 
     storeInCache() {
