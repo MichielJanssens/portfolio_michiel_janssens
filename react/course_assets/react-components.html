@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="legacy-root"></div>
+    <div id="extend-component-root"></div>
+    <div id="stateless-component-root"></div>
+
+    <script type="text/babel">
+      // there are three different ways of making React components
+      // Two most used today are:
+      //    - a 'stateless component', used for components that are a pure function of props
+      //    - extending a React.Component class (ES6 only). This creates a stateful component.
+      //
+      // React.createClass is the old (pre-ES6) way of defining a react component
+
+      var LegacyClass = React.createClass({
+        render() {
+          return (
+            <h1>Hello, from a legacy class!</h1>
+          )
+        }
+      });
+
+      var StatelessComponent = function() {
+        return <h1>Hello, from a stateless component!</h1>;
+      }
+
+      class ExtendedComponent extends React.Component {
+        render() {
+          return (
+            <h1>Hello, from extending a React.Component!</h1>
+          )
+        }
+      }
+
+      ReactDOM.render(
+        <LegacyClass />,
+        document.getElementById('legacy-root')
+      );
+
+      ReactDOM.render(
+        <ExtendedComponent />,
+        document.getElementById('extend-component-root')
+      );
+
+      ReactDOM.render(
+        <StatelessComponent />,
+        document.getElementById('stateless-component-root')
+      );
+
+    </script>
+  </body>
+</html>
